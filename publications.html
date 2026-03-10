@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eucharist Kun | Personal Website</title>
+  <title>Publications | Eucharist Kun</title>
   <style>
     :root {
       --bg: #f7f9fc;
@@ -16,8 +16,6 @@
     }
 
     * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -71,64 +69,29 @@
       padding: 2rem 1.25rem 4rem;
     }
 
-    .hero {
-      background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 3rem 2rem;
-      margin-bottom: 2rem;
-    }
-
-    h1, h2, h3 {
-      line-height: 1.2;
-      margin-top: 0;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .subtitle {
-      color: var(--muted);
-      font-size: 1.1rem;
-      max-width: 700px;
-    }
-
-    .button-row {
-      margin-top: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .button {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
-      text-decoration: none;
-      padding: 0.8rem 1.1rem;
-      border-radius: 10px;
-      font-weight: 700;
-    }
-
-    .button.secondary {
-      background: white;
-      color: var(--accent);
-      border: 1px solid var(--accent);
-    }
-
     .section {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 18px;
       padding: 2rem;
       margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      line-height: 1.2;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 2.2rem;
+    }
+
+    .pub-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pub-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
     }
 
     .muted {
@@ -144,8 +107,8 @@
     }
 
     @media (max-width: 640px) {
-      h1 { font-size: 2rem; }
-      .hero, .section { padding: 1.4rem; }
+      .section { padding: 1.4rem; }
+      h1 { font-size: 1.9rem; }
       nav a { margin-left: 0.75rem; }
     }
   </style>
@@ -163,25 +126,19 @@
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <h1>Eucharist Kun</h1>
-      <p class="subtitle">
-        I am a postdoctoral researcher in Integrative Biology at The University of Texas at Austin
-        working at the intersection of artificial intelligence for image analysis and large-scale human genomics.
-      </p>
-      <div class="button-row">
-        <a class="button" href="publications.html">View Publications</a>
-        <a class="button secondary" href="cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
-      </div>
-    </section>
-
     <section class="section">
-      <h2>About Me</h2>
-      <p>
-        I received my Ph.D. (2025) from The University of Texas at Austin under the tutelage of Vagheesh Narasimhan.
-      </p>
-      <p>
-        I also received my Bachelors of Science degree (2018) from The University of Texas at Austin where I studied Biochemistry.
+      <h1>Publications</h1>
+      <div class="pub-item">
+        <strong>Kun, E</strong>., Sohail, M., Narasimhan, V. M. <a href="https://doi.org/10.1016/j.xgen.2024.100740">“The trait specific timing of accelerated genomic change in the human lineage.”</a> <em>Cell Genomics</em>, 2025
+      </div>
+      <div class="pub-item">
+        <strong>Kun, E</strong>., Javan, E. M., Smith, O., Gulamali, F., Fuente, J., Flynn, B. I., Vajrala, K., Trutner, Z.,
+        Jayakumar, P., Tucker-Drob, E. M., Sohail, M., Singh, T., Narasimhan, V. M.
+        <a href="https://doi.org/10.1126/science.adf8009"> “The genetic architecture and evolution of the human skeletal form.”</a>
+        <em>Science</em>, 2023
+      </div>
+      <p class="muted" style="margin-top: 1rem;">
+        A full list of publications is available on <a href="https://scholar.google.com/citations?user=oH1ijNMAAAAJ&hl=en">Google Scholar</a>.
       </p>
     </section>
   </main>
