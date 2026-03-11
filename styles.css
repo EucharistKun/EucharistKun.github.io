@@ -38,15 +38,6 @@ body {
   z-index: 4;
 }
 
-.sidebar-name {
-  color: var(--text);
-  text-decoration: none;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.2;
-  text-align: center;
-}
-
 .headshot {
   width: 180px;
   height: 180px;
@@ -100,10 +91,11 @@ header {
   margin: 0;
   padding: 1rem 1.25rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .brand {
@@ -111,6 +103,9 @@ header {
   font-weight: 700;
   color: var(--text);
   text-decoration: none;
+  position: absolute;
+  left: calc(var(--sidebar-offset) + (var(--sidebar-w) / 2));
+  transform: translateX(-50%);
 }
 
 nav a {
@@ -129,17 +124,21 @@ main {
   max-width: var(--maxw);
   margin-left: calc(var(--sidebar-w) + var(--sidebar-offset) - 0.5rem);
   margin-right: 1.5rem;
-  padding: 2rem 1.25rem 4rem;
+  padding: 1.5rem 1.25rem 4rem;
 }
 
 .hero {
-  padding: 3rem 2rem;
-  margin-bottom: 2rem;
+  padding: 0 2rem 2rem;
+  margin-bottom: 0.75rem;
 }
 
 .section {
   padding: 2rem;
   margin-bottom: 1.5rem;
+}
+
+.publications-hero {
+  margin-bottom: 0;
 }
 
 h1, h2, h3 {
@@ -194,6 +193,15 @@ footer {
     left: 0;
     top: 0;
     padding: 1rem;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .brand {
+    position: static;
+    transform: none;
   }
 
   .social-links {
