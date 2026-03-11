@@ -4,190 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eucharist Kun | Personal Website</title>
-  <style>
-    :root {
-      --bg: #f7f9fc;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --accent: #1d4ed8;
-      --border: #dbe3ee;
-      --maxw: 960px;
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .nav {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 1rem 1.25rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      margin-left: 1rem;
-      font-weight: 600;
-    }
-
-    nav a:hover,
-    nav a:focus {
-      color: var(--accent);
-    }
-
-    main {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 2rem 1.25rem 4rem;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 3rem 2rem;
-      margin-bottom: 2rem;
-    }
-
-    h1, h2, h3 {
-      line-height: 1.2;
-      margin-top: 0;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .subtitle {
-      color: var(--muted);
-      font-size: 1.1rem;
-      max-width: 700px;
-    }
-
-    .button-row {
-      margin-top: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .button {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
-      text-decoration: none;
-      padding: 0.8rem 1.1rem;
-      border-radius: 10px;
-      font-weight: 700;
-    }
-
-    .button.secondary {
-      background: white;
-      color: var(--accent);
-      border: 1px solid var(--accent);
-    }
-
-    .section {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    footer {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 0 1.25rem 2.5rem;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 640px) {
-      h1 { font-size: 2rem; }
-      .hero, .section { padding: 1.4rem; }
-      nav a { margin-left: 0.75rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <a class="brand" href="index.html">Eucharist Kun</a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="publications.html">Publications</a>
-        <a href="cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-      </nav>
+  <aside class="site-sidebar">
+    <img class="headshot" src="EucharistKun_headshot.jpeg" alt="Headshot of Eucharist Kun" />
+    <div class="social-links">
+      <a class="social-link" href="https://www.linkedin.com/in/eucharist-kun-36a1a2130/" target="_blank" rel="noopener noreferrer">
+        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#0A66C2" d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.03-1.84-3.03-1.84 0-2.13 1.44-2.13 2.93v5.68H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.84 3.37-1.84 3.6 0 4.26 2.37 4.26 5.45v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45z"/></svg>
+        LinkedIn
+      </a>
+      <a class="social-link" href="https://x.com/EucharistKun" target="_blank" rel="noopener noreferrer">
+        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#111" d="M18.9 2H22l-6.77 7.74L23 22h-6.1l-4.78-6.26L6.64 22H3.53l7.24-8.28L1 2h6.25l4.32 5.7L18.9 2zm-1.07 18.2h1.69L6.33 3.7H4.52L17.83 20.2z"/></svg>
+        Twitter
+      </a>
+      <a class="social-link" href="https://scholar.google.com/citations?user=oH1ijNMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 14L5 13.3V17c0 2.76 3.13 5 7 5s7-2.24 7-5v-3.7L12 17z"/></svg>
+        Google Scholar
+      </a>
     </div>
-  </header>
+  </aside>
 
-  <main>
-    <section class="hero" id="home">
-      <h1>Eucharist Kun</h1>
-      <p class="subtitle">
-        I am a postdoctoral researcher in Integrative Biology at The University of Texas at Austin
-        working at the intersection of artificial intelligence for image analysis and large-scale human genomics.
-      </p>
-      <div class="button-row">
-        <a class="button" href="publications.html">View Publications</a>
-        <a class="button secondary" href="cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+  <div class="page-shell">
+    <header>
+      <div class="nav">
+        <a class="brand" href="index.html">Eucharist Kun</a>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="publications.html">Publications</a>
+          <a href="cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <section class="section">
-      <h2>About Me</h2>
-      <p>
-        I received my Ph.D. (2025) from The University of Texas at Austin under the tutelage of Vagheesh Narasimhan.
-      </p>
-      <p>
-        I also received my Bachelors of Science degree (2018) from The University of Texas at Austin where I studied Biochemistry.
-      </p>
-    </section>
-  </main>
+    <main>
+      <section class="hero" id="home">
+        <h1>Welcome!</h1>
+        <p class="subtitle">
+          I am a postdoctoral researcher in Integrative Biology at The University of Texas at Austin
+          working at the intersection of artificial intelligence for image analysis and large-scale human genomics.
+        </p>
+      </section>
 
-  <footer>
-    <p>© 2026 Eucharist Kun. Built with GitHub Pages.</p>
-  </footer>
+      <section class="section">
+        <h2>About Me</h2>
+        <p>
+          I received my Ph.D. (2025) from The University of Texas at Austin under the tutelage of Vagheesh Narasimhan.
+        </p>
+        <p>
+          I also received my Bachelors of Science degree (2018) from The University of Texas at Austin where I studied Biochemistry.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Eucharist Kun. Built with GitHub Pages.</p>
+    </footer>
+  </div>
 </body>
 </html>
