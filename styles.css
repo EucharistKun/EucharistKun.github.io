@@ -5,7 +5,7 @@
   --muted: #6b7280;
   --accent: #1d4ed8;
   --border: #dbe3ee;
-  --maxw: 960px;
+  --maxw: 1080px;
   --sidebar-w: 250px;
   --sidebar-offset: 3rem;
   --header-h: 72px;
@@ -35,6 +35,16 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  z-index: 4;
+}
+
+.sidebar-name {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .headshot {
@@ -74,10 +84,7 @@ body {
   display: inline-block;
 }
 
-.page-shell {
-  margin-left: calc(var(--sidebar-w) + var(--sidebar-offset));
-  min-height: 100vh;
-}
+.page-shell { min-height: 100vh; }
 
 header {
   background: var(--surface);
@@ -85,6 +92,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
+  width: 100%;
 }
 
 .nav {
@@ -103,8 +111,6 @@ header {
   font-weight: 700;
   color: var(--text);
   text-decoration: none;
-  position: relative;
-  left: calc(-1 * (var(--sidebar-w) + var(--sidebar-offset) - 1.5rem));
 }
 
 nav a {
@@ -121,7 +127,8 @@ nav a:focus {
 
 main {
   max-width: var(--maxw);
-  margin: 0 auto;
+  margin-left: calc(var(--sidebar-w) + var(--sidebar-offset) - 0.5rem);
+  margin-right: 1.5rem;
   padding: 2rem 1.25rem 4rem;
 }
 
@@ -172,7 +179,8 @@ h2 {
 
 footer {
   max-width: var(--maxw);
-  margin: 0 auto;
+  margin-left: calc(var(--sidebar-w) + var(--sidebar-offset) - 0.5rem);
+  margin-right: 1.5rem;
   padding: 0 1.25rem 2.5rem;
   color: var(--muted);
   font-size: 0.95rem;
@@ -188,17 +196,17 @@ footer {
     padding: 1rem;
   }
 
-  .brand {
-    left: 0;
-  }
-
   .social-links {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
   }
 
-  .page-shell { margin-left: 0; }
+  main,
+  footer {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 640px) {
