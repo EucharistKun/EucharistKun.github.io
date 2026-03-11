@@ -90,7 +90,7 @@ header {
   max-width: none;
   margin: 0;
   min-height: var(--header-h);
-  padding: 0.625rem 1.25rem;
+  padding: 0.625rem calc(var(--sidebar-offset) + (var(--sidebar-w) / 2));
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -200,6 +200,7 @@ footer {
 
   .nav {
     justify-content: center;
+    padding: 0.625rem 1.25rem;
   }
 
   .brand {
