@@ -7,7 +7,8 @@
   --border: #dbe3ee;
   --maxw: 960px;
   --sidebar-w: 250px;
-  --sidebar-offset: 1.5rem;
+  --sidebar-offset: 3rem;
+  --header-h: 72px;
 }
 
 * { box-sizing: border-box; }
@@ -24,10 +25,10 @@ body {
 
 .site-sidebar {
   position: fixed;
-  top: 0;
+  top: var(--header-h);
   left: var(--sidebar-offset);
   width: var(--sidebar-w);
-  height: 100vh;
+  height: calc(100vh - var(--header-h));
   background: var(--bg);
   padding: 1.5rem 1rem;
   display: flex;
@@ -102,6 +103,8 @@ header {
   font-weight: 700;
   color: var(--text);
   text-decoration: none;
+  position: relative;
+  left: calc(-1 * (var(--sidebar-w) + var(--sidebar-offset) - 1.5rem));
 }
 
 nav a {
@@ -181,7 +184,12 @@ footer {
     width: 100%;
     height: auto;
     left: 0;
+    top: 0;
     padding: 1rem;
+  }
+
+  .brand {
+    left: 0;
   }
 
   .social-links {
