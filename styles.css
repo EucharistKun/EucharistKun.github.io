@@ -8,7 +8,7 @@
   --maxw: 1080px;
   --sidebar-w: 250px;
   --sidebar-offset: 3rem;
-  --header-h: 130px;
+  --header-h: 65px;
 }
 
 * { box-sizing: border-box; }
@@ -90,12 +90,12 @@ header {
   max-width: none;
   margin: 0;
   min-height: var(--header-h);
-  padding: 1.25rem;
+  padding: 0.625rem 1.25rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   position: relative;
 }
 
@@ -129,13 +129,13 @@ main {
 }
 
 .hero {
-  max-width: 780px;
+  max-width: 900px;
   padding: 0 2rem 1rem;
   margin-bottom: 0.1rem;
 }
 
 .section {
-  max-width: 780px;
+  max-width: 900px;
   padding: 2rem;
   margin-bottom: 1.5rem;
 }
