@@ -7,6 +7,7 @@
   --border: #dbe3ee;
   --maxw: 960px;
   --sidebar-w: 250px;
+  --sidebar-offset: 1.5rem;
 }
 
 * { box-sizing: border-box; }
@@ -24,11 +25,10 @@ body {
 .site-sidebar {
   position: fixed;
   top: 0;
-  left: 0;
+  left: var(--sidebar-offset);
   width: var(--sidebar-w);
   height: 100vh;
-  background: var(--surface);
-  border-right: 1px solid var(--border);
+  background: var(--bg);
   padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
@@ -37,11 +37,10 @@ body {
 }
 
 .headshot {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: 12px;
   object-fit: cover;
-  border: 1px solid var(--border);
 }
 
 .social-links {
@@ -64,7 +63,6 @@ body {
 
 .social-link:hover,
 .social-link:focus {
-  background: #eef3ff;
   color: var(--accent);
 }
 
@@ -76,7 +74,7 @@ body {
 }
 
 .page-shell {
-  margin-left: var(--sidebar-w);
+  margin-left: calc(var(--sidebar-w) + var(--sidebar-offset));
   min-height: 100vh;
 }
 
@@ -89,8 +87,8 @@ header {
 }
 
 .nav {
-  max-width: var(--maxw);
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   padding: 1rem 1.25rem;
   display: flex;
   justify-content: space-between;
@@ -125,17 +123,11 @@ main {
 }
 
 .hero {
-  background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
-  border: 1px solid var(--border);
-  border-radius: 18px;
   padding: 3rem 2rem;
   margin-bottom: 2rem;
 }
 
 .section {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 18px;
   padding: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -188,8 +180,7 @@ footer {
     position: static;
     width: 100%;
     height: auto;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
+    left: 0;
     padding: 1rem;
   }
 
