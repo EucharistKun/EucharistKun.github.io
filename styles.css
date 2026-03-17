@@ -165,9 +165,50 @@ h2 {
   max-width: none;
 }
 
+
 .pub-item {
   padding: 1rem 0;
   border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.pub-details {
+  flex: 1;
+}
+
+.pub-title {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.pub-title:hover,
+.pub-title:focus {
+  color: var(--accent);
+}
+
+.pub-authors,
+.pub-venue {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.pub-venue {
+  color: var(--muted);
+}
+
+.pub-image {
+  width: 130px;
+  max-width: 35%;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid var(--border);
 }
 
 .pub-item:last-child {
@@ -212,6 +253,15 @@ footer {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  .pub-item {
+    flex-direction: column;
+  }
+
+  .pub-image {
+    width: min(220px, 100%);
+    max-width: 100%;
   }
 
   main,
